@@ -18,8 +18,8 @@ RUN chmod 0644 /etc/cron.d/crontab
 
 RUN crontab /etc/cron.d/crontab
 
-RUN mv /usr/local/lib/python3.8/site-packages/autoremove_torrents-1.5.4-py3.8.egg .
-RUN unzip autoremove_torrents-1.5.4-py3.8.egg -d /usr/local/lib/python3.8/site-packages/autoremove_torrents-1.5.4-py3.8.egg
+RUN mv /usr/local/lib/python3.11/site-packages/autoremove_torrents-1.5.4-py3.11.egg .
+RUN unzip autoremove_torrents-1.5.4-py3.11.egg -d /usr/local/lib/python3.11/site-packages/autoremove_torrents-1.5.4-py3.11.egg
 
 ENTRYPOINT ["/entrypoint.sh"]
 
