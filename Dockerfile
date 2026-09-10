@@ -1,6 +1,6 @@
 FROM python:3.11-slim-bookworm
 
-ENV GIT_REPO 'https://github.com/dceldran/autoremove-torrents'
+ENV GIT_REPO 'https://github.com/Lokkem/autoremove-torrents'
 RUN ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
 RUN echo 'Europe/Madrid' >/etc/timezone
 WORKDIR /app
