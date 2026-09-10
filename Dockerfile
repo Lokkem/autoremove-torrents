@@ -4,9 +4,7 @@ ENV GIT_REPO 'https://github.com/dceldran/autoremove-torrents'
 RUN ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
 RUN echo 'Europe/Madrid' >/etc/timezone
 WORKDIR /app
-RUN apt update \
-    && apt -y install cron git unzip\
-    && apt clean
+RUN apt-get update && apt-get -y install cron git unzip && apt-get clean
 RUN git clone $GIT_REPO && cd autoremove-torrents && python3 setup.py install
 RUN mkdir /etc/autoremove_torrents && touch /etc/autoremove_torrents/config.yml
 
