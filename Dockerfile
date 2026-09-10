@@ -1,4 +1,4 @@
-FROM python:3.8.5-slim
+FROM python:3.8-slim-bullseye
 
 ENV GIT_REPO 'https://github.com/dceldran/autoremove-torrents'
 RUN ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
