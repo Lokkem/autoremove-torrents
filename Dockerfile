@@ -5,6 +5,7 @@ RUN ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
 RUN echo 'Europe/Madrid' >/etc/timezone
 WORKDIR /app
 RUN apt-get update && apt-get -y install cron git unzip && apt-get clean
+RUN pip install "urllib3<2.1"
 RUN git clone $GIT_REPO && cd autoremove-torrents && python3 setup.py install
 RUN mkdir /etc/autoremove_torrents && touch /etc/autoremove_torrents/config.yml
 
